@@ -1,11 +1,6 @@
-<<<<<<< HEAD
 ## Team 19 Project
 
 ### `install packages`
-=======
-## Available Scripts
->>>>>>> 285d3f900edf965c5a97d76e9532915e376b1afc
-
 Install these packages by typing these commands in console.<br/>
 
 npm install firebase --save <br/>
