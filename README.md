@@ -1,5 +1,8 @@
 ## Team 19 Project
 
+### `install nodejs`
+First, install nodejs from https://nodejs.org/en/
+
 ### `install packages`
 Install these packages by typing these commands in console.<br/>
 
