@@ -6,8 +6,8 @@ First, install nodejs from https://nodejs.org/en/
 ### `install packages`
 Install these packages by typing these commands in console.<br/>
 
-npm install firebase --save <br/>
 npm install --save firebase <br/>
+npm install @material-ui/core <br/>
 
 Update this if you install any packages. 
 
