@@ -1,7 +1,3 @@
-/**
- * This module implements a navigator for all the different routes.
- */
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 
