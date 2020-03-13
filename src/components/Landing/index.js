@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Landing = () => (
+const App = () => (
   <div>
-    <h1>Landing</h1>
+    <h1>App</h1>
   </div>
 );
 
-export default Landing;
+export default App;
