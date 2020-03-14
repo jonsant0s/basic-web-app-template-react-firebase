@@ -1,9 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import SignOutButton from '../SignOut';
 import * as ROUTES from '../../constants/routes';
 
+import { AuthUserContext } from '../Session';
+
+/**
+ * The following block of code below will show different navigations for
+ * an authenticated user and a non-authenticated user.
+ */
 const Navigation = () => (
+  <div>
+    <AuthUserContext.Consumer>
+      {authUser =>
+        authUser ? <NavigationAuth /> : <NavigationAuth />
+      }
+    </AuthUserContext.Consumer>
+  </div>
+);
+
+const NavigationAuth = () => (
   <div>
     <ul>
       <li>
@@ -21,8 +38,22 @@ const Navigation = () => (
       <li>
         <Link to={ROUTES.ADMIN}>Admin</Link>
       </li>
+      <li>
+        <SignOutButton />
+      </li>
     </ul>
   </div>
+);
+
+const NavigationNonAuth = () => (
+  <ul>
+    <li>
+      <Link to={ROUTES.LANDING}>Landing</Link>
+    </li>
+    <li>
+      <Link to={ROUTES.SIGN_IN}>Sign In</Link>
+    </li>
+  </ul>
 );
 
 export default Navigation;
