@@ -8,7 +8,7 @@ const INITIAL_STATE = {
   error: null,
 };
 
-class PasswordForgetFormBase extends Component {
+class PasswordChangeForm extends Component {
   constructor(props) {
     super(props);
 
@@ -19,7 +19,7 @@ class PasswordForgetFormBase extends Component {
     const { passwordOne } = this.state;
 
     this.props.firebase
-      .doPasswordReset(passwordOne)
+      .doPasswordUpdate(passwordOne)
       .then(() => {
         this.setState({ ...INITIAL_STATE });
       })
@@ -35,9 +35,10 @@ class PasswordForgetFormBase extends Component {
   };
 
   render() {
-    const { passwordOne, passwordTwo } = this.state;
+    const { passwordOne, passwordTwo, error } = this.state;
 
-    const isInvalid = passwordOne !== passwordTwo || passwordOne === '';
+    const isInvalid =
+      passwordOne !== passwordTwo || passwordOne === '';
 
     return (
       <form onSubmit={this.onSubmit}>
@@ -46,14 +47,14 @@ class PasswordForgetFormBase extends Component {
           value={passwordOne}
           onChange={this.onChange}
           type="password"
-          placeholder="Password"
+          placeholder="New Password"
         />
         <input
           name="passwordTwo"
           value={passwordTwo}
           onChange={this.onChange}
           type="password"
-          placeholder="Confirm Password"
+          placeholder="Confirm New Password"
         />
         <button disabled={isInvalid} type="submit">
           Reset My Password
@@ -65,4 +66,4 @@ class PasswordForgetFormBase extends Component {
   }
 }
 
-export default = withFirebase(PasswordChangeForm);
+export default withFirebase(PasswordChangeForm);
