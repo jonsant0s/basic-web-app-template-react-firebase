@@ -3,14 +3,14 @@ import 'firebase/auth';
 import 'firebase/database';
 
 const config = {
-    apiKey: "AIzaSyDVWMu9TRcjtW_dtjdq-TvnRicfNDqNCw4",
-    authDomain: "ujoss-59de3.firebaseapp.com",
-    databaseURL: "https://ujoss-59de3.firebaseio.com",
-    projectId: "ujoss-59de3",
-    storageBucket: "ujoss-59de3.appspot.com",
-    messagingSenderId: "461638397937",
-    appId: "1:461638397937:web:3854175c48ed8d00acde50",
-    measurementId: "G-VPSGMSQGJK"
+    apiKey: ,
+    authDomain: ,
+    databaseURL: ,
+    projectId: ,
+    storageBucket: ,
+    messagingSenderId: ,
+    appId: ,
+    measurementId: 
 };
 
 class Firebase {
@@ -41,7 +41,7 @@ class Firebase {
 
   doSendEmailVerification = () =>
     this.auth.currentUser.sendEmailVerification({
-      url: process.env.REACT_APP_CONFIRMATION_EMAIL_REDIRECT,
+      url: ,
     });
 
   doPasswordUpdate = password =>
